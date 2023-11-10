@@ -1,0 +1,31 @@
+# Project: 물리시뮬레이션
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = "../../../../../Program\ Files\ (x86)/Dev-Cpp/새\ 폴더/main.o" 이름없음2.o
+LINKOBJ  = "../../../../../Program Files (x86)/Dev-Cpp/새 폴더/main.o" 이름없음2.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc "../../../../../Program Files (x86)/Dev-Cpp/새 폴더/gdi32.dll"
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = 물리시뮬레이션.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+"../../../../../Program\ Files\ (x86)/Dev-Cpp/새\ 폴더/main.o": ../../../../../Program\ Files\ (x86)/Dev-Cpp/새\ 폴더/main.cpp
+	$(CPP) -c "../../../../../Program Files (x86)/Dev-Cpp/새 폴더/main.cpp" -o "../../../../../Program Files (x86)/Dev-Cpp/새 폴더/main.o" $(CXXFLAGS)
+
+이름없음2.o: 이름없음2.cpp
+	$(CPP) -c 이름없음2.cpp -o 이름없음2.o $(CXXFLAGS)
